@@ -256,6 +256,10 @@ textarea {
     margin-block: var(--size-800);
 }
 
+.text-cen {
+    text-align: center;
+}
+
 .text-lg {
     font-size: var(--fs-xlg);
     padding: var(--size-300);
