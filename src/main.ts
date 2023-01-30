@@ -1,7 +1,6 @@
 import { getElement, getAllElements } from "./utils/helpers";
 const APP = getElement<HTMLDivElement>('#app')!;
 
-
 const cursorPath = getElement('#cursor');
 
 APP.addEventListener('mousemove', (e: MouseEvent) => {
