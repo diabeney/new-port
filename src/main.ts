@@ -1,15 +1,20 @@
-import { getElement, getAllElements } from "./utils/helpers";
-const APP = getElement<HTMLDivElement>('#app')!;
+import { getAllElements } from "./utils/helpers";
+import { getManyElements } from "./utils/helpers";
+import { modifyAttribute } from "./utils/helpers";
+const [, menuBtn, navbar] = getManyElements('#app', '.menu-bg', 'nav');
 
-const cursorPath = getElement('#cursor');
 
-APP.addEventListener('mousemove', (e: MouseEvent) => {
-    if(cursorPath === null) null; 
-    else{
-        cursorPath.style.left = '' + e.clientX + 'px';
-        cursorPath.style.top = '' + e.clientY + 'px';
-    } 
-} )
-const circle = getElement('#cursor svg circle')!;
+menuBtn.addEventListener('click', () => {
+   const menuBars = getAllElements('.menu-bar');
+   const navIsVisible = navbar.getAttribute('data-open') === 'true';
+   if(navIsVisible) {
+    modifyAttribute(navbar, 'data-open', 'false');
+    menuBars.forEach(bar => modifyAttribute(bar, 'data-rotate','false'));
+} else {
+    menuBars.forEach(bar => modifyAttribute(bar, 'data-rotate', 'true'));
+    navbar.setAttribute('data-open', 'true')
+   }
+})
+
 
 
