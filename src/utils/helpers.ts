@@ -37,3 +37,4 @@ export function modifyAttribute(element: HTMLElement, attr: string, value?:strin
     if(value) return element.setAttribute(attr, value);
     return attribute;
 }
+
