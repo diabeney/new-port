@@ -9,7 +9,7 @@ export function getElement<T extends HTMLElement>(selector: string): T {
  */
 
 export function getAllElements<T extends HTMLElement>(selectors: string): T[]  {
-    const element: T[] | null = Array.from(document.querySelectorAll(selectors));
+    const element: T[] = Array.from(document.querySelectorAll(selectors));
     if(!element) return [];
     return element;
 }
@@ -38,3 +38,16 @@ export function modifyAttribute(element: HTMLElement, attr: string, value?:strin
     return attribute;
 }
 
+export function animate(element: HTMLElement | string, animation: string) {
+   return new Promise((resolve) => {
+        const animationName = `animate__${animation}`;
+        const target = typeof element === 'string' ? getElement(element) : element;
+        target.classList.add('animate__animated', animationName);
+
+        target.addEventListener('animationend', (e) => {
+            e.stopPropagation();
+            target.classList.remove(`animate__animated`, animationName);
+            resolve('Animation ended');
+        }, {once: true})
+    })
+}
