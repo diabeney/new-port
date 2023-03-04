@@ -1,18 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Karla:wght@400;500;700&family=Quicksand:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&family=Space+Grotesk:wght@300;400;500;700&display=swap');
 
 :root {
     --clr-primary-700: hsl(246, 100%, 5%);
     --clr-primary-400: hsl(246, 100%, 15%);
     --clr-secondary-600: hsl(255, 55%, 26%);
     --clr-secondary-100: hsl(255, 55%, 86%);
-    --clr-white: hsl(245, 100%, 95%);
-    --ff-primary: "Jost", sans-serif;
-    --ff-secondary: "Manrope", sans-serif;
+    --clr-white: hsla(245, 100%, 95%,.7);
+    --clr-white-fade: hsla(245, 100%, 95%, .2);
+    --ff-primary: "Manrope", sans-serif;
+    --ff-secondary: "Space Grotesk", sans-serif;
 
     --fs-sm: 1rem;
     --fs-md: 1.2rem;
     --fs-lg: 1.5rem;
-    --fs-xlg: 3rem;
+    --fs-xlg: 2rem;
 
     --fw-regular: 300;
     --fw-semi-bold: 500;
@@ -47,16 +48,15 @@ html {
 
 
 body {
-    position: relative;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     -webkit-font-smoothing: antialiased;
     background-color: var(--clr-primary-700);
     font-family: var(--ff-primary);
+    font-size: var(--size-400);
     color: var(--clr-white);
-    font-weight: 400;
+    font-weight: 300;
     overflow-x: hidden;
-    min-height: 200vh;
 }
 
 svg {
@@ -183,6 +183,14 @@ textarea {
     }
 }
 
+i {
+    font-size: 2rem;
+    color: var(--clr-white-fade);
+}
+
+i:hover {
+    color: var(--clr-white);
+}
 /* Utility Classes */
 
 .none {
@@ -275,14 +283,12 @@ textarea {
 }
 
 .text-lg {
-    font-size: var(--fs-xlg);
-    padding: var(--size-300);
+    font-size: var(--fs-lg);
 }
 
 .text-md {
     font-size: var(--fs-md);
-    padding: var(--size-200);
-}
+}   
 
 .text-sm {
     font-size: var(--fs-sm);
@@ -296,79 +302,88 @@ textarea {
 #app {
     width: 100vw;
     overflow-x: hidden;
+    padding: var(--size-020);
 }
 
-.menu-bg {
-    position: fixed;
-    z-index: 100;
-    top: 5%;
-    right: 5%;
-    aspect-ratio: 1/1;
-    width: 2.8rem;
-    display: grid;
-    place-items: center;
-    border-radius: .2rem;
-    background-color: var(--clr-primary-700);
-    backdrop-filter: blur(30px);
-}
-.menu {
-    aspect-ratio: 4/3;
-    width: 2.5rem;
-    border: none;
-    background: none;
-    padding: .2rem;
-    display: grid;
-    place-items: center;
+.intro {
+    font-size: 3rem;
 }
 
-.menu-bar {
-    width: 80%;
-    height: 2px;
-    background-color: var(--clr-secondary-100);
-    transition: transform 300ms ease-in;
-}
 
-.one[data-rotate='true'] {
-    transform-origin: 35% 110%;
-    transform: rotate(40deg);
-}
-.two[data-rotate='true'] {
-    transform-origin:10% -100%;
-    transform: rotate(-45deg);
-}
 
-header {
-    width: 100vw;
+main {
+    min-height: 200vh;
 }
-
-header nav[data-open='true'] {
-    transform: translateX(0%);
-}
-
-header nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    transform: translateX(-100%);
-    background-color: var(--clr-primary-700);
-    z-index: 10;
-}
-
-header nav ul {
-    height: 100%;
+.socials {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    gap: 2rem;
+    padding-bottom: var(--size-200);
+    /* border-bottom: 1px solid var(--clr-secondary-100); */
 }
 
-header nav ul li {
+.socials .line {
+    width: 100%;
+    height: .1px;
+    background-color: var(--clr-white-fade);
+}
+
+.content h2 {
+    font-size: var(--size-800);
+}
+
+.projects {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 100%;
+    flex-grow: 1;
+    border: 1px solid var(--clr-white-fade);
+    border-left: 6px solid var(--clr-white-fade);
+    border-radius: 2px;
+}
+
+.card h3 {
+    font-size: var(--size-600);
+}
+
+.card .links {
+    display: flex;
+    gap: 1rem   ;
+}
+.card a {
+    font-size: var(--size-400);
+}
+
+
+
+@media (min-width: 50em) {
+
+    header {
+        height: 100vh;
+    }
+
+    i {
+            font-size: inherit;
+    }
+    #app {
+        width: 90vw;
+    }
+
+    body {
+        font-size: var(--size-700);
+    }
+    .intro {
+        font-size: 6rem;
+        padding-block: 3rem;
+    }
+
+    .content h2 {
     font-size: var(--size-900);
 }
 
-@media (min-width: 800px) {
-    header nav {
-        width: 100%;
-    }
 }
