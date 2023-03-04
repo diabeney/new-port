@@ -5,21 +5,28 @@ const dateElement = getElement('.date');
 dateElement.textContent += new Date().getFullYear().toString();
 
 // <------- Animations ------------>
+let INTERVALID:number;
 
-let INTERVALID:number | undefined;
+function stopAnimation() {
+    clearInterval(INTERVALID);
+    INTERVALID = 0;
+}
+
 
 function staggerChildren(parentElement: Element, animationName: string) {
     const childNodes = Array.from(parentElement.children).filter(element => element.tagName.toLowerCase() !== 'br');
-    let count = 0;
     if(childNodes.length) {
-        INTERVALID =  setInterval(() => {
-            let currentElement = childNodes[count];
-            currentElement.classList.add('animate__animated', animationName);
-            count++
-            if(count === childNodes.length) {
-                clearInterval(INTERVALID)
-            }
-        }, 800)
+        if(!INTERVALID) {
+            let count = 0;
+            INTERVALID =  setInterval(() => {
+                let currentElement = childNodes[count];
+                currentElement.classList.add('animate__animated', animationName);
+                count++
+                if(count === childNodes.length) {
+                    stopAnimation()
+                }
+            }, 800)
+        }
     }
 }
 
@@ -32,34 +39,35 @@ function intersectionCallback(entries: IntersectionObserverEntry[], observer: In
         if(!entry.isIntersecting) return; // animate only when the element is intersecting.
         const dataset = entry.target.getAttribute('data-intersect');
         switch(dataset) {
-            case 'fade':
-                // entry.target.classList.add('animate__animated', 'animate__fadeIn');
+            case 'fadeup':
                 if(isParentElement(entry.target) && shouldStagger(entry.target)) {
                     staggerChildren(entry.target, 'animate__fadeInUp')
-                }
+                } 
+                entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                // observer.unobserve(entry.target) // unobserving to make sure the animation runs only once.
                 return;
-                case 'zoom':
-                    // entry.target.classList.add('animate__animated', 'animate__slideInLeft');
-                    if(isParentElement(entry.target) && shouldStagger(entry.target)) {
-                        staggerChildren(entry.target, 'animate__slideInUp')
-                    }
+            case 'fadein':
+                if(isParentElement(entry.target) && shouldStagger(entry.target)) {
+                    staggerChildren(entry.target, 'animate__fadeIn')
+                }
+                entry.target.classList.add('animate__animated', 'animate__fadeIn');
+                // observer.unobserve(entry.target) // unobserving to make sure the animation runs only once.
                 return;
             default:
-                console.log('data attribute not specified')
+                console.log('data attribute not specified');
+                return;
         }
-        observer.unobserve(entry.target) // unobserving to make sure the animation runs only once.
     })
 }
 
 const fadeInOptions = {
-    threshold: .5,
+    threshold: .8,
 }
 
-const [hero, projects] = getManyElements('.hero', '.projects')
+const faders = getManyElements('.hero', '.projects', '.content > h2', '.skills h2', '.info', '.info ul');
 
 
 const fadeInOnScroll = new IntersectionObserver(intersectionCallback, fadeInOptions);
-fadeInOnScroll.observe(hero);
-fadeInOnScroll.observe(projects)
+faders.forEach(fader => fadeInOnScroll.observe(fader))
 
 
