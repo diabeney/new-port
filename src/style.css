@@ -28,6 +28,8 @@
     --size-300: 1.2rem;
     --size-200: 1rem;
     --size-100: 0.8rem;
+
+    --default-animation: cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
 *,
@@ -111,6 +113,9 @@ h6 {
 mark {
     background: transparent;
     color: var(--clr-secondary-100);
+}
+
+mark:where(.underline) {
     border-bottom: 1px solid var(--clr-white);
 }
 
@@ -191,6 +196,7 @@ i {
 
 i:hover {
     color: var(--clr-white);
+    transition: color 300ms var(--default-animation);
 }
 /* Utility Classes */
 
@@ -310,6 +316,13 @@ i:hover {
     font-size: 3rem;
 }
 
+.fade {
+    opacity: 0;
+}
+
+.fade.animate__animated {
+    opacity: 1;
+}
 
 
 main {
@@ -329,20 +342,21 @@ main {
     background-color: var(--clr-white-fade);
 }
 
+
+
 .content h2 {
     font-size: var(--size-800);
 }
 
 .projects {
     width: 100%;
-    display: flex;
+    display: grid;
     gap: 2rem;
     flex-wrap: wrap;
 }
 
 .card {
     width: 100%;
-    flex-grow: 1;
     border: 1px solid var(--clr-white-fade);
     border-left: 6px solid var(--clr-white-fade);
     border-radius: 2px;
@@ -389,6 +403,14 @@ footer {
 
     .content h2 {
     font-size: var(--size-900);
+}
+
+.projects {
+    grid-template-columns: 1fr 1fr;
+}
+
+.project__title {
+    font-size: var(--size-600);
 }
 
 }

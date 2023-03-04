@@ -8,7 +8,7 @@ export function getElement<T extends HTMLElement>(selector: string): T {
  * Returns an array of all the instances of the selector
  */
 
-export function getAllElements<T extends HTMLElement>(selectors: string): T[]  {
+export function getAllElements<T extends Element>(selectors: string): T[]  {
     const element: T[] = Array.from(document.querySelectorAll(selectors));
     if(!element) return [];
     return element;
@@ -23,4 +23,14 @@ export function getAllElements<T extends HTMLElement>(selectors: string): T[]  {
 export function getManyElements(...selectors: string[]) {
     const elements = selectors.map(selector => getElement(selector));
     return elements;
+}
+
+export function isParentElement(parentElement: Element) {
+    const childNodes = Array.from(parentElement.childNodes);
+    return childNodes.length ? true : false
+}
+
+export function shouldStagger(element: Element) {
+    const staggerAttr = element.getAttribute('data-stagger');
+    return staggerAttr === 'true' ? true : false;
 }
