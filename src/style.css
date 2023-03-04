@@ -111,6 +111,7 @@ h6 {
 mark {
     background: transparent;
     color: var(--clr-secondary-100);
+    border-bottom: 1px solid var(--clr-white);
 }
 
 /* A elements that don't have a class get default styles */
@@ -359,7 +360,11 @@ main {
     font-size: var(--size-400);
 }
 
-
+footer {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
 
 @media (min-width: 50em) {
 
