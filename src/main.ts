@@ -1,4 +1,4 @@
-import { getAllElements, getElement, getManyElements } from "./utils/helpers";
+import { getElement, getManyElements } from "./utils/helpers";
 import { isParentElement, shouldStagger } from "./utils/helpers";
 
 const dateElement = getElement('.date');
@@ -31,7 +31,7 @@ function staggerChildren(parentElement: Element, animationName: string) {
 }
 
 /*
-    Trying to make the intersection callback function generic
+    Trying to make the intersection callback function reusable
  */
 
 function intersectionCallback(entries: IntersectionObserverEntry[], observer: IntersectionObserver) {
@@ -41,17 +41,21 @@ function intersectionCallback(entries: IntersectionObserverEntry[], observer: In
         switch(dataset) {
             case 'fadeup':
                 if(isParentElement(entry.target) && shouldStagger(entry.target)) {
-                    staggerChildren(entry.target, 'animate__fadeInUp')
+                    return staggerChildren(entry.target, 'animate__fadeInUp') 
                 } 
-                entry.target.classList.add('animate__animated', 'animate__fadeInUp');
-                // observer.unobserve(entry.target) // unobserving to make sure the animation runs only once.
+                entry.target.classList.add('animate__animated', 'animate__slideInLeft');
+                observer.unobserve(entry.target)
                 return;
             case 'fadein':
                 if(isParentElement(entry.target) && shouldStagger(entry.target)) {
-                    staggerChildren(entry.target, 'animate__fadeIn')
+                    return staggerChildren(entry.target, 'animate__fadeIn')
                 }
                 entry.target.classList.add('animate__animated', 'animate__fadeIn');
-                // observer.unobserve(entry.target) // unobserving to make sure the animation runs only once.
+                observer.unobserve(entry.target) // unobserving to make sure the animation runs only once.
+                return;
+            case 'bouncein':// intentionally not supporting staggerChildren.
+                entry.target.classList.add('animate__animated', 'animate__bounceIn');
+                observer.unobserve(entry.target);
                 return;
             default:
                 console.log('data attribute not specified');
@@ -60,14 +64,21 @@ function intersectionCallback(entries: IntersectionObserverEntry[], observer: In
     })
 }
 
-const fadeInOptions = {
-    threshold: .8,
+const OPTIONS = {
+    Fade: {
+        threshold: .2,
+    },
+    Bounce: {
+        threshold: 1,
+    }
 }
 
-const faders = getManyElements('.hero', '.projects', '.content > h2', '.skills h2', '.info', '.info ul');
+const faders = getManyElements('.hero', '.projects', '.content > h2', '.skills h2', '.info');
+const bouncer = getElement('.footer');
 
-
-const fadeInOnScroll = new IntersectionObserver(intersectionCallback, fadeInOptions);
-faders.forEach(fader => fadeInOnScroll.observe(fader))
+const fadeInOnScroll = new IntersectionObserver(intersectionCallback, OPTIONS.Fade);
+const bounceInOnScroll = new IntersectionObserver(intersectionCallback, OPTIONS.Bounce);
+faders.forEach(fader => fadeInOnScroll.observe(fader));
+bounceInOnScroll.observe(bouncer);
 
 
