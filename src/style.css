@@ -24,7 +24,7 @@
     --size-700: 2rem;
     --size-600: 1.8rem;
     --size-500: 1.6rem;
-    --size-400: 1.4rem;
+    --size-400: 1.2rem;
     --size-300: 1.2rem;
     --size-200: 1rem;
     --size-100: 0.8rem;
@@ -391,6 +391,8 @@ footer {
     }
     #app {
         width: 90vw;
+        margin-inline: auto;
+        max-width: 1300px;
     }
 
     body {

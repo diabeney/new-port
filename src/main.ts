@@ -1,8 +1,10 @@
-import { getElement, getManyElements } from "./utils/helpers";
+import { getAllElements, getElement, getManyElements } from "./utils/helpers";
 import { isParentElement, shouldStagger } from "./utils/helpers";
 
 const dateElement = getElement('.date');
+const  links = getAllElements('a');
 dateElement.textContent += new Date().getFullYear().toString();
+links.forEach(link => link.setAttribute('target', '_blank'));
 
 // <------- Animations ------------>
 let INTERVALID:number;
@@ -53,7 +55,7 @@ function intersectionCallback(entries: IntersectionObserverEntry[], observer: In
                 entry.target.classList.add('animate__animated', 'animate__fadeIn');
                 observer.unobserve(entry.target) // unobserving to make sure the animation runs only once.
                 return;
-            case 'bouncein':// intentionally not supporting staggerChildren.
+            case 'bouncein':// intentionally neglecting support for staggerChildren.
                 entry.target.classList.add('animate__animated', 'animate__bounceIn');
                 observer.unobserve(entry.target);
                 return;
