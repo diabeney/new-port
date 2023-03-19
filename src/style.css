@@ -312,8 +312,13 @@ i:hover {
     padding: var(--size-020);
 }
 
+.hero {
+    height: 100%;
+}
+
 .intro {
-    font-size: 3rem;
+    font-size: 4rem;
+    /* line-height: 1.5; */
 }
 
 .fade {
@@ -344,7 +349,7 @@ main {
 
 
 
-.content h2 {
+.content h2 , .skills h2 {
     font-size: var(--size-800);
 }
 
@@ -383,8 +388,8 @@ footer {
 @media (min-width: 50em) {
 
     header {
-        height: 100vh;
-    }
+            height: 100vh;
+        }
 
     i {
             font-size: inherit;
