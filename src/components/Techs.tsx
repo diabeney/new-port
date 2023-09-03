@@ -402,10 +402,10 @@ export function AutoCad() {
         <use
           fill="#d86666"
           overflow="visible"
-          xlink:href="#_tcPC28ZsEauYvlMQO0K_a"
+          xlinkHref="#_tcPC28ZsEauYvlMQO0K_a"
         ></use>
         <clipPath id="_tcPC28ZsEauYvlMQO0K_b">
-          <use overflow="visible" xlink:href="#_tcPC28ZsEauYvlMQO0K_a"></use>
+          <use overflow="visible" xlinkHref="#_tcPC28ZsEauYvlMQO0K_a"></use>
         </clipPath>
         <g clip-path="url(#_tcPC28ZsEauYvlMQO0K_b)">
           <defs>
@@ -420,10 +420,10 @@ export function AutoCad() {
           <use
             fill="#d86666"
             overflow="visible"
-            xlink:href="#_tcPC28ZsEauYvlMQO0K_c"
+            xlinkHref="#_tcPC28ZsEauYvlMQO0K_c"
           ></use>
           <clipPath id="_tcPC28ZsEauYvlMQO0K_d">
-            <use overflow="visible" xlink:href="#_tcPC28ZsEauYvlMQO0K_c"></use>
+            <use overflow="visible" xlinkHref="#_tcPC28ZsEauYvlMQO0K_c"></use>
           </clipPath>
         </g>
         <path
