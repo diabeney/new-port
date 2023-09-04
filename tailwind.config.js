@@ -7,6 +7,8 @@ export default {
       colors: {
         BgWhite: "#F1F6F9",
         BgDark: "#040D12",
+        BgDark_200: "#040D12be",
+        BgWhite_200: "#F1F6F9be",
         LightAccent: "hsl(0, 0%, 67%)",
         secondary: "#020202be",
       },

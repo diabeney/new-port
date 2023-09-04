@@ -1,6 +1,7 @@
+import MongoDBLogo from "../assets/icons8-mongodb-a-cross-platform-document-oriented-database-program-tal-revivo-shadow/icons8-mongodb-a-cross-platform-document-oriented-database-program-96.png";
 export function Html() {
   return (
-    <div className="grayscale mx-4">
+    <div className=" mx-4 flex justify-center flex-col items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
@@ -17,8 +18,8 @@ export function Html() {
           y2="46.236"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#f09701"></stop>
-          <stop offset="1" stop-color="#e36001"></stop>
+          <stop offset="0" stopColor="#f09701"></stop>
+          <stop offset="1" stopColor="#e36001"></stop>
         </linearGradient>
         <path
           fill="url(#SNASnMitCxQrIYk4GDibta_v8RpPQUwv0N8_gr1)"
@@ -45,13 +46,14 @@ export function Html() {
           opacity=".07"
         ></path>
       </svg>
+      <small className=" w-fit dark:text-LightAccent">HTML</small>
     </div>
   );
 }
 
 export function Css() {
   return (
-    <div className="grayscale">
+    <div className=" mx-4 flex justify-center flex-col items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
@@ -97,13 +99,14 @@ export function Css() {
           d="M50,26.957v8h11.969l-0.807,9H50c-0.009-0.002-0.008,8-0.008,8h10.485l-1.027,11.44L50,65.957v8.84	l17.4-4.83l0.12-1.44l2-22.37l0.21-2.29l1.5-16.91H50z"
         ></path>
       </svg>
+      <small className=" w-fit dark:text-LightAccent">CSS</small>
     </div>
   );
 }
 
 export function JavaScript() {
   return (
-    <div className="grayscale">
+    <div className=" mx-4 flex justify-center flex-col items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
@@ -118,13 +121,14 @@ export function JavaScript() {
           d="M29.538,32.947c0.692,1.124,1.444,2.201,3.037,2.201c1.338,0,2.04-0.665,2.04-1.585 c0-1.101-0.726-1.492-2.198-2.133l-0.807-0.344c-2.329-0.988-3.878-2.226-3.878-4.841c0-2.41,1.845-4.244,4.728-4.244 c2.053,0,3.528,0.711,4.592,2.573l-2.514,1.607c-0.553-0.988-1.151-1.377-2.078-1.377c-0.946,0-1.545,0.597-1.545,1.377 c0,0.964,0.6,1.354,1.985,1.951l0.807,0.344C36.452,29.645,38,30.839,38,33.523C38,36.415,35.716,38,32.65,38 c-2.999,0-4.702-1.505-5.65-3.368L29.538,32.947z M17.952,33.029c0.506,0.906,1.275,1.603,2.381,1.603 c1.058,0,1.667-0.418,1.667-2.043V22h3.333v11.101c0,3.367-1.953,4.899-4.805,4.899c-2.577,0-4.437-1.746-5.195-3.368 L17.952,33.029z"
         ></path>
       </svg>
+      <small className=" w-fit dark:text-LightAccent">JavaScript</small>
     </div>
   );
 }
 
 export function React() {
   return (
-    <div className="grayscale">
+    <div className=" mx-4 flex justify-center flex-col items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
@@ -147,13 +151,14 @@ export function React() {
         ></path>
         <circle cx="24" cy="24" r="4" fill="#80deea"></circle>
       </svg>
+      <small className=" w-fit dark:text-LightAccent">ReactJs</small>
     </div>
   );
 }
 
 export function Node() {
   return (
-    <div className="grayscale">
+    <div className=" mx-4 flex justify-center flex-col items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
@@ -183,13 +188,14 @@ export function Node() {
           d="M47.703 21.791l-4.906-2.715C42.705 19.025 42.602 19 42.5 19c-.102 0-.205.025-.297.076h.001l-4.907 2.715C37.114 21.892 37 22.084 37 22.294v5.411c0 .209.114.402.297.503l4.908 2.717c.184.102.409.102.593 0l2.263-1.253c.207-.115.206-.412-.002-.526l-4.924-2.687C40.052 26.412 40 26.325 40 26.231v-2.466c0-.092.05-.177.13-.221l2.235-1.236h-.001c.042-.023.088-.034.135-.034.047 0 .093.012.135.034l2.235 1.237c.08.044.13.129.13.221v2.012c0 .086.046.166.121.209.075.042.167.042.242-.001l2.398-1.393c.148-.086.24-.245.24-.417v-1.88C48 22.085 47.886 21.892 47.703 21.791zM10.703 21.791l-4.906-2.715C5.705 19.025 5.602 19 5.5 19c-.102 0-.205.025-.297.076h.001l-4.907 2.715C.114 21.892 0 22.084 0 22.294v7.465c0 .086.046.166.121.209.075.042.167.042.242-.001l2.398-1.393C2.909 28.488 3 28.329 3 28.157v-4.393c0-.092.05-.177.13-.221l2.235-1.236H5.365c.042-.023.088-.034.135-.034.047 0 .093.012.135.034l2.235 1.237C7.95 23.588 8 23.673 8 23.765v4.393c0 .172.091.331.24.417l2.398 1.393c.075.043.167.043.242.001C10.954 29.925 11 29.845 11 29.759v-7.464C11 22.085 10.886 21.892 10.703 21.791z"
         ></path>
       </svg>
+      <small className=" w-fit dark:text-LightAccent">NodeJs</small>
     </div>
   );
 }
 
 export function Express() {
   return (
-    <div className="grayscale">
+    <div className=" mx-4 flex justify-center flex-col items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
@@ -206,21 +212,22 @@ export function Express() {
           y2="33.216"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#6d7479"></stop>
-          <stop offset="1" stop-color="#323538"></stop>
+          <stop offset="0" stopColor="#6d7479"></stop>
+          <stop offset="1" stopColor="#323538"></stop>
         </linearGradient>
         <path
           fill="url(#Xfeb2ANkiLrn2PxL5jJHLa_PZQVBAxaueDJ_gr1)"
           d="M33.244,25l-9.121-12h1.18c0.84,0,1.631,0.392,2.139,1.061l7.059,9.287l7.059-9.287	C42.067,13.392,42.858,13,43.698,13h1.18l-9.121,12l9.547,12.56h-1.18c-0.84,0-1.631-0.392-2.139-1.061L34.5,26.652l-7.485,9.847	c-0.508,0.668-1.299,1.061-2.139,1.061h-1.18L33.244,25z M4,26v0.783c0,4.199,2.776,8.032,6.868,8.972	c4.439,1.02,8.49-1.247,10.228-4.842C21.366,30.355,21.928,30,22.547,30h1.028c-1.319,4.655-5.616,8.059-10.707,7.999	C6.777,37.927,2,32.694,2,26.142V26v-2l0-0.716c0-5.427,3.812-10.273,9.171-11.136C18.055,11.039,24,16.325,24,23v3H4z M4,24h18v-1	c0-5.648-5.202-10.08-11.076-8.768C6.804,15.153,4,19.002,4,23.71V24z"
         ></path>
       </svg>
+      <small className=" w-fit dark:text-LightAccent">ExpressJS</small>
     </div>
   );
 }
 
 export function Matlab() {
   return (
-    <div className="grayscale">
+    <div className=" mx-4 flex justify-center flex-col items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
@@ -237,9 +244,9 @@ export function Matlab() {
           y2="23.854"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#4adddf"></stop>
-          <stop offset=".699" stop-color="#3f5352"></stop>
-          <stop offset=".863" stop-color="#442729"></stop>
+          <stop offset="0" stopColor="#4adddf"></stop>
+          <stop offset=".699" stopColor="#3f5352"></stop>
+          <stop offset=".863" stopColor="#442729"></stop>
         </linearGradient>
         <path
           fill="url(#Z8bG89TnZW8~BwJjzqmnXa_r5Y16PcDkoWI_gr1)"
@@ -253,9 +260,9 @@ export function Matlab() {
           y2="27.033"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#4adddf"></stop>
-          <stop offset=".792" stop-color="#3f5352"></stop>
-          <stop offset="1" stop-color="#442729"></stop>
+          <stop offset="0" stopColor="#4adddf"></stop>
+          <stop offset=".792" stopColor="#3f5352"></stop>
+          <stop offset="1" stopColor="#442729"></stop>
         </linearGradient>
         <polygon
           fill="url(#Z8bG89TnZW8~BwJjzqmnXb_r5Y16PcDkoWI_gr2)"
@@ -269,31 +276,32 @@ export function Matlab() {
           y2="24"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".206" stop-color="#53140f"></stop>
-          <stop offset=".3" stop-color="#84360f"></stop>
-          <stop offset=".413" stop-color="#b85b10"></stop>
-          <stop offset=".511" stop-color="#df7610"></stop>
-          <stop offset=".59" stop-color="#f68710"></stop>
-          <stop offset=".639" stop-color="#ff8d10"></stop>
-          <stop offset=".729" stop-color="#fd8a10"></stop>
-          <stop offset=".8" stop-color="#f58010"></stop>
-          <stop offset=".865" stop-color="#e86f10"></stop>
-          <stop offset=".925" stop-color="#d65811"></stop>
-          <stop offset=".982" stop-color="#c03a11"></stop>
-          <stop offset="1" stop-color="#b72f11"></stop>
+          <stop offset=".206" stopColor="#53140f"></stop>
+          <stop offset=".3" stopColor="#84360f"></stop>
+          <stop offset=".413" stopColor="#b85b10"></stop>
+          <stop offset=".511" stopColor="#df7610"></stop>
+          <stop offset=".59" stopColor="#f68710"></stop>
+          <stop offset=".639" stopColor="#ff8d10"></stop>
+          <stop offset=".729" stopColor="#fd8a10"></stop>
+          <stop offset=".8" stopColor="#f58010"></stop>
+          <stop offset=".865" stopColor="#e86f10"></stop>
+          <stop offset=".925" stopColor="#d65811"></stop>
+          <stop offset=".982" stopColor="#c03a11"></stop>
+          <stop offset="1" stopColor="#b72f11"></stop>
         </linearGradient>
         <path
           fill="url(#Z8bG89TnZW8~BwJjzqmnXc_r5Y16PcDkoWI_gr3)"
           d="M32,3c5,0,13,27,15,34c0,0-7.017-6.63-11-6s-5.47,6.548-9.725,10.756C23.5,44.5,21,45,21,45	s-0.206-8.124-5-11c-2.5-1.5-5-1-5-1s6.049-2.901,9.474-8.174S28.5,3,32,3z"
         ></path>
       </svg>
+      <small className=" w-fit dark:text-LightAccent">MATLAB</small>
     </div>
   );
 }
 
 export function TailwindCss() {
   return (
-    <div className="grayscale">
+    <div className=" mx-4 flex justify-center flex-col items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
@@ -307,13 +315,14 @@ export function TailwindCss() {
           d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z"
         ></path>
       </svg>
+      <small className=" w-fit dark:text-LightAccent">TailwindCSS</small>
     </div>
   );
 }
 
 export function TypeScript() {
   return (
-    <div className="grayscale">
+    <div className=" mx-4 flex justify-center flex-col items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
@@ -330,8 +339,8 @@ export function TypeScript() {
           y2="24"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#0d61a9"></stop>
-          <stop offset="1" stop-color="#16528c"></stop>
+          <stop offset="0" stopColor="#0d61a9"></stop>
+          <stop offset="1" stopColor="#16528c"></stop>
         </linearGradient>
         <path
           fill="url(#atmafua87GAY-Q3DVUuwga_nCj4PvnCO0tZ_gr1)"
@@ -358,13 +367,14 @@ export function TypeScript() {
           points="14,22 14,25.034 18.972,25.034 18.972,38.972 21.965,38.972 22.018,25.034 27,25.034 27,22"
         ></polygon>
       </svg>
+      <small className=" w-fit dark:text-LightAccent">TypeScript</small>
     </div>
   );
 }
 
 export function Next() {
   return (
-    <div className="grayscale">
+    <div className=" mx-4 flex justify-center flex-col items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
@@ -378,13 +388,14 @@ export function Next() {
           d="M18.974,31.5c0,0.828-0.671,1.5-1.5,1.5s-1.5-0.672-1.5-1.5v-14c0-0.653,0.423-1.231,1.045-1.43 c0.625-0.198,1.302,0.03,1.679,0.563l16.777,23.704C40.617,36.709,44,30.735,44,24c0-11-9-20-20-20S4,13,4,24s9,20,20,20 c3.192,0,6.206-0.777,8.89-2.122L18.974,22.216V31.5z M28.974,16.5c0-0.828,0.671-1.5,1.5-1.5s1.5,0.672,1.5,1.5v13.84l-3-4.227 V16.5z"
         ></path>
       </svg>
+      <small className=" w-fit dark:text-LightAccent">NextJS</small>
     </div>
   );
 }
 
 export function AutoCad() {
   return (
-    <div className="grayscale">
+    <div className=" mx-4 flex justify-center flex-col items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
@@ -407,7 +418,7 @@ export function AutoCad() {
         <clipPath id="_tcPC28ZsEauYvlMQO0K_b">
           <use overflow="visible" xlinkHref="#_tcPC28ZsEauYvlMQO0K_a"></use>
         </clipPath>
-        <g clip-path="url(#_tcPC28ZsEauYvlMQO0K_b)">
+        <g clipPath="url(#_tcPC28ZsEauYvlMQO0K_b)">
           <defs>
             <rect
               id="_tcPC28ZsEauYvlMQO0K_c"
@@ -438,8 +449,8 @@ export function AutoCad() {
           y2="50.864"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".457" stop-color="#cb2123"></stop>
-          <stop offset="1" stop-color="#752425"></stop>
+          <stop offset=".457" stopColor="#cb2123"></stop>
+          <stop offset="1" stopColor="#752425"></stop>
         </linearGradient>
         <path
           fill="url(#_tcPC28ZsEauYvlMQO0K_e_2JfzmJYy7OGc_gr1)"
@@ -457,8 +468,8 @@ export function AutoCad() {
           y2="14.022"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".1" stop-color="#b75e5a"></stop>
-          <stop offset=".949" stop-color="#6c272d"></stop>
+          <stop offset=".1" stopColor="#b75e5a"></stop>
+          <stop offset=".949" stopColor="#6c272d"></stop>
         </linearGradient>
         <path
           fill="url(#_tcPC28ZsEauYvlMQO0K_f_2JfzmJYy7OGc_gr2)"
@@ -472,8 +483,8 @@ export function AutoCad() {
           y2="36.409"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#a32424"></stop>
-          <stop offset="1" stop-color="#752425"></stop>
+          <stop offset="0" stopColor="#a32424"></stop>
+          <stop offset="1" stopColor="#752425"></stop>
         </linearGradient>
         <path
           fill="url(#_tcPC28ZsEauYvlMQO0K_g_2JfzmJYy7OGc_gr3)"
@@ -487,8 +498,8 @@ export function AutoCad() {
           y2="34.329"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".343" stop-color="#d77670"></stop>
-          <stop offset=".949" stop-color="#a62224"></stop>
+          <stop offset=".343" stopColor="#d77670"></stop>
+          <stop offset=".949" stopColor="#a62224"></stop>
         </linearGradient>
         <path
           fill="url(#_tcPC28ZsEauYvlMQO0K_h_2JfzmJYy7OGc_gr4)"
@@ -502,8 +513,8 @@ export function AutoCad() {
           y2="31.827"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset=".343" stop-color="#d77670"></stop>
-          <stop offset=".949" stop-color="#a62224"></stop>
+          <stop offset=".343" stopColor="#d77670"></stop>
+          <stop offset=".949" stopColor="#a62224"></stop>
         </linearGradient>
         <path
           fill="url(#_tcPC28ZsEauYvlMQO0K_i_2JfzmJYy7OGc_gr5)"
@@ -518,6 +529,16 @@ export function AutoCad() {
           d="M16.9,35.64c-0.26,1.34-0.46,2.46-0.53,2.75c-0.11,0.44-0.2,2.45-0.25,3.9	c-0.04,0.96-0.55,1.84-1.36,2.34l-0.63,0.39c-0.29,0.12-0.61,0.24-0.94,0.34c-0.19,0.06-0.38,0.11-0.57,0.15	c0.13-0.34,0.28-0.75,0.46-1.22c0.09-0.26,0.2-0.54,0.3-0.84c0.5-1.31,1.11-2.95,1.78-4.73c0.17-0.43,0.34-0.87,0.51-1.31	c0.22-0.55,0.43-1.11,0.65-1.67L16.9,35.64z"
         ></path>
       </svg>
+      <small className=" w-fit dark:text-LightAccent">AUTOCAD</small>
+    </div>
+  );
+}
+
+export function MongoDB() {
+  return (
+    <div className=" mx-4 flex justify-center flex-col items-center">
+      <img className=" w-[6rem]" src={MongoDBLogo} alt="" />
+      <small className=" w-fit dark:text-LightAccent">MongoDB</small>
     </div>
   );
 }

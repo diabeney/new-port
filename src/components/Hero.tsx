@@ -11,7 +11,7 @@ export default function Hero() {
       </section>
       <section>
         <p>
-          A front-end developer with experience in building and designing
+          A front-end engineer with experience in building and designing
           user-friendly websites and web applications. I'm always looking for
           opportunities to learn and grow. Feel free to explore my portfolio and{" "}
           <a
@@ -39,13 +39,13 @@ export default function Hero() {
       </section>
       <section className="flex gap-4 py-6 justify-center items-center">
         <a href="https://github.com/diabeney">
-          <RiGithubLine size={24} color="#333" />
+          <RiGithubLine size={24} color={"#c0c0c0"} />
         </a>
         <a href="https://twitter.com/diabeneyy">
-          <RiTwitterLine size={24} color="#333" />
+          <RiTwitterLine size={24} color={"#c0c0c0"} />
         </a>
         <a href="https://www.linkedin.com/in/diabeney/">
-          <RiLinkedinBoxLine size={24} color="#333" />
+          <RiLinkedinBoxLine size={24} color={"#c0c0c0"} />
         </a>
         <div className="w-full h-[0.1px] bg-LightAccent"></div>
       </section>

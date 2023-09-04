@@ -9,21 +9,20 @@ export default function Projects() {
       <section>
         <span className="flex items-center gap-1">
           <a
-            href=""
+            href="https://cheesa.netlify.app/"
+            target="_blank"
             className=" my-2 hover:border-b-[1px] dark:text-LightAccent text-secondary hover: border-LightAccent"
           >
             Chemical Engineering E-Library
           </a>
           <span className=" -rotate-45">
-            <RiArrowRightLine />
+            <RiArrowRightLine color={"#c0c0c0"} />
           </span>
         </span>
         <p className="py-2 text-BgDark dark:text-BgWhite">
           The chemical engineering e-library is a digital library that contains
           resources related to chemical engineering. These resources include
-          textbooks,articles and other useful materials. Chemical engineering
-          e-libraries are a valuable resource for students, researchers, and
-          professionals in the chemical engineering field.
+          textbooks,articles and other useful materials.
         </p>
       </section>
       <section>
@@ -35,7 +34,7 @@ export default function Projects() {
             Create Smooth App
           </a>
           <span className=" -rotate-45">
-            <RiArrowRightLine />
+            <RiArrowRightLine color={"#c0c0c0"} />
           </span>
         </span>
 
@@ -46,7 +45,7 @@ export default function Projects() {
       </section>
       <a
         href="https://github.com/diabeney?tab=repositories"
-        className=" my-2 border-b-[1px] text-LightAccent text-secondary  border-LightAccent"
+        className=" my-2 border-b-[1px] dark:text-LightAccent text-secondary  border-LightAccent"
       >
         See more personal projects{" "}
       </a>
