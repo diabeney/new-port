@@ -11,14 +11,13 @@ import {
   React,
   Next,
   AutoCad,
-  MongoDB,
 } from "./Techs";
 export default function Tools() {
   return (
     <div className="p-4 pb-8">
-      <h3 className=" text-3xl py-6 text-BgDark dark:text-BgWhite">
+      <h1 className=" text-3xl py-6 text-BgDark dark:text-BgWhite">
         Languages & Tools
-      </h3>
+      </h1>
       <Marquee pauseOnHover speed={60}>
         <Html />
         <Css />
@@ -31,7 +30,6 @@ export default function Tools() {
         <React />
         <Next />
         <AutoCad />
-        <MongoDB />
       </Marquee>
     </div>
   );

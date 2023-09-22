@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: var(--font-paragraph);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+.blog__content h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-blog);
+}
+
+.blog__title {
+  font-weight: 600;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+
+.attention {
+  font-family: serif;
+}
+
+.blog__content a {
+  @apply text-blue-500 underline;
+}
+ul li,
+ol li {
+  @apply pl-4 list-decimal list-inside py-2;
+}
+
+p {
+  @apply dark:text-BgWhite_200;
+}
+.motivational {
+  @apply bg-slate-50 p-4 rounded-md dark:bg-gray-900  border-gray-300 dark:border-gray-500 border-[1px];
+}
+.info {
+  @apply bg-blue-50 my-4 p-4 rounded-md border-l-blue-300 border-l-[4px] dark:bg-BgDark_100   border-blue-300 dark:border-blue-900 border-[1px];
+}
+
+.info > h2,
+.info > h3 {
+  @apply text-blue-400;
+}
+
+em {
+  font-family: serif;
+}
+
+.warning {
+  @apply my-4 p-4 rounded-md border-l-red-300 border-l-[4px] bg-red-50 dark:bg-[#3D2323] border-red-300  dark:border-red-300 border-[1px];
+}
+
+.warning > h1,
+.warning > h2,
+.warning > h3 {
+  @apply dark:text-red-300 text-red-500;
+}
+
+.heading {
+  font-family: var(--font-heading);
+}

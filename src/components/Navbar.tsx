@@ -1,20 +1,28 @@
+"use client";
+import Link from "next/link";
 import { RiMoonLine, RiSunLine } from "react-icons/ri";
+import useSwitchTheme from "../hooks/useSwitchTheme";
 
-function Navbar({
-  handleToggleTheme,
-  theme,
-}: {
-  handleToggleTheme: () => void;
-  theme: "light" | "dark";
-}) {
+function Navbar() {
+  const { mode, toggleTheme } = useSwitchTheme();
   return (
-    <nav className=" w-full flex justify-between px-4 py-2 backdrop-blur-sm saturate-50 bg-BgWhite_200 dark:bg-BgDark_200 sticky top-0">
-      <h6 className=" ttext-secondary dark:text-LightAccent">Dbn.</h6>
+    <nav className=" w-full flex justify-between px-4 py-2 backdrop-blur-md saturate-150  sticky top-0">
+      <section className="flex gap-8 items-center ">
+        <div className=" ttext-secondary dark:text-LightAccent">
+          <Link href="/" className="heading">
+            Dbn.
+          </Link>
+        </div>
+      </section>
       <button
-        onClick={handleToggleTheme}
+        onClick={toggleTheme}
         className=" aspect-square p-1 w-fit grid place-items-center border-[1px] border-LightAccent rounded-md cursor-pointer bg-BgWhite_200"
       >
-        {theme === "light" ? <RiMoonLine /> : <RiSunLine />}
+        {mode === "light" ? (
+          <RiMoonLine className="text-black" />
+        ) : (
+          <RiSunLine className=" text-black" />
+        )}
       </button>
     </nav>
   );

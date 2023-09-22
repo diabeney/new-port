@@ -1,4 +1,3 @@
-import MongoDBLogo from "../assets/icons8-mongodb-a-cross-platform-document-oriented-database-program-tal-revivo-shadow/icons8-mongodb-a-cross-platform-document-oriented-database-program-96.png";
 export function Html() {
   return (
     <div className=" mx-4 flex justify-center flex-col items-center">
@@ -530,15 +529,6 @@ export function AutoCad() {
         ></path>
       </svg>
       <small className=" w-fit dark:text-LightAccent">AUTOCAD</small>
-    </div>
-  );
-}
-
-export function MongoDB() {
-  return (
-    <div className=" mx-4 flex justify-center flex-col items-center">
-      <img className=" w-[6rem]" src={MongoDBLogo} alt="" />
-      <small className=" w-fit dark:text-LightAccent">MongoDB</small>
     </div>
   );
 }
