@@ -8,8 +8,8 @@ function Navbar() {
   return (
     <nav className=" w-full flex justify-between px-4 py-2 backdrop-blur-md saturate-150  sticky top-0">
       <section className="flex gap-8 items-center ">
-        <div className=" ttext-secondary dark:text-LightAccent">
-          <Link href="/" className="heading">
+        <div className=" text-secondary  dark:text-LightAccent">
+          <Link href="/" className="  heading">
             Dbn.
           </Link>
         </div>

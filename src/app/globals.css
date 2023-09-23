@@ -15,17 +15,8 @@ h6 {
   font-family: var(--font-heading);
 }
 
-.blog__content h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-blog);
-}
-
 .blog__title {
-  font-weight: 600;
+  font-family: var(--font-heading);
 }
 
 body {
