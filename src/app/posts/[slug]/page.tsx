@@ -10,11 +10,8 @@ import axios from "axios";
 // eslint-disable-next-line react-refresh/only-export-components
 export async function generateStaticParams() {
   const posts: { results: Post[] } = await axios
-    .get(`http://localhost:3000/posts`)
+    .get(`https://personal-blog-api.up.railway.app/posts`)
     .then((res) => res.data);
-  // const posts: { results: Post[] } = await axios
-  //   .get(`https://personal-blog-api.up.railway.app/posts`)
-  //   .then((res) => res.data);
 
   return posts.results.map((post) => ({
     slug: post.slug,
@@ -27,14 +24,8 @@ async function PostDetail({ params }) {
     data: string;
     postData: Post;
   } = await axios
-    .get(`http://localhost:3000/posts/${slug}`)
+    .get(`https://personal-blog-api.up.railway.app/posts/${slug}`)
     .then((res) => res.data);
-  // const foundPost: {
-  //   data: string;
-  //   postData: Post;
-  // } = await axios
-  //   .get(`https://personal-blog-api.up.railway.app/posts/${slug}`)
-  //   .then((res) => res.data);
   const { data, postData } = foundPost;
 
   return (
@@ -68,7 +59,6 @@ async function PostDetail({ params }) {
           </div>
         </section>
       )}
-
       {data && (
         <section className=" blog__content text-slate-950 dark:text-BgWhite_200">
           <Markdown

@@ -11,7 +11,6 @@ const BlogHeading = Syne({
   variable: "--font-blog",
   fallback: ["Inter", "Segoe UI"],
 });
-
 const Paragraph = Manrope({
   weight: ["400"],
   subsets: ["latin"],

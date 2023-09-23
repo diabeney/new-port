@@ -12,10 +12,8 @@ export type TPost = {
 };
 
 async function Blog() {
-  const res = await axios.get("http://localhost:3000/posts");
+  const res = await axios.get("https://personal-blog-api.up.railway.app/posts");
   const data: { results: Post[] } = await res.data;
-  // const res = await axios.get("https://personal-blog-api.up.railway.app/posts");
-  // const data: { results: Post[] } = await res.data;
   return (
     <div className="p-4">
       <h1 className=" text-3xl py-6 text-BgDark dark:text-BgWhite">Writing</h1>
