@@ -5,12 +5,13 @@ import { format } from "date-fns";
 import { RiBallPenLine } from "react-icons/ri";
 import { RiArrowLeftLine } from "react-icons/ri";
 import Link from "next/link";
+import axios from "axios";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export async function generateStaticParams() {
-  const posts: { results: Post[] } = await fetch(
-    `https://personal-blog-api.up.railway.app/posts`
-  ).then((res) => res.json());
+  const posts: { results: Post[] } = await axios
+    .get(`https://personal-blog-api.up.railway.app/posts`)
+    .then((res) => res.data);
 
   return posts.results.map((post) => ({
     slug: post.slug,
@@ -22,9 +23,9 @@ async function PostDetail({ params }) {
   const foundPost: {
     data: string;
     postData: Post;
-  } = await fetch(
-    `https://personal-blog-api.up.railway.app/posts/${slug}`
-  ).then((res) => res.json());
+  } = await axios
+    .get(`https://personal-blog-api.up.railway.app/posts/${slug}`)
+    .then((res) => res.data);
   const { data, postData } = foundPost;
 
   return (
