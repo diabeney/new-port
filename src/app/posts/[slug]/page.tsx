@@ -24,7 +24,7 @@ async function PostDetail({ params }) {
     data: string;
     postData: Post;
   } = await axios
-    .get(`https://personal-blog-api.up.railway.app/posts/${slug}`)
+    .get(`http://localhost:3000/posts/${slug}`)
     .then((res) => res.data);
   const { data, postData } = foundPost;
 
@@ -69,18 +69,29 @@ async function PostDetail({ params }) {
                 h1: {
                   props: {
                     className:
-                      " text-[1.8rem] lg:text-[2.5rem] dark:text-BgWhite",
+                      " text-[1.8rem] lg:text-[2.5rem] py-4 dark:text-BgWhite",
                   },
                 },
                 h2: {
                   props: {
                     className:
-                      "text-[1.4rem] lg:text-[2rem] dark:text-BgWhite ",
+                      "text-[1.4rem] lg:text-[2rem] py-4 dark:text-BgWhite ",
                   },
                 },
                 p: {
                   props: {
                     className: "py-4 ",
+                  },
+                },
+
+                img: {
+                  props: {
+                    className: "w-full rounded-md ",
+                  },
+                },
+                small: {
+                  props: {
+                    className: " w-fit mx-auto block italic",
                   },
                 },
               },

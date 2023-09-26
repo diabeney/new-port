@@ -7,7 +7,8 @@ html {
 }
 
 body {
-  @apply text-base lg:text-lg;
+  font-size: 1rem;
+  line-height: 1.8rem;
 }
 
 h1,
@@ -20,7 +21,7 @@ h6 {
 }
 
 .blog__title {
-  font-family: var(--font-heading);
+  font-family: var(--font-paragraph);
   line-height: 1.5;
 }
 
