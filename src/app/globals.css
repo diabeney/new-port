@@ -6,6 +6,10 @@ html {
   font-family: var(--font-paragraph);
 }
 
+body {
+  @apply text-base lg:text-lg;
+}
+
 h1,
 h2,
 h3,
@@ -17,11 +21,7 @@ h6 {
 
 .blog__title {
   font-family: var(--font-heading);
-}
-
-body {
   line-height: 1.5;
-  font-size: 1.2rem;
 }
 
 .attention {
