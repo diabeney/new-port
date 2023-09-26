@@ -24,7 +24,7 @@ async function PostDetail({ params }) {
     data: string;
     postData: Post;
   } = await axios
-    .get(`http://localhost:3000/posts/${slug}`)
+    .get(`https://personal-blog-api.up.railway.app/posts/${slug}`)
     .then((res) => res.data);
   const { data, postData } = foundPost;
 
