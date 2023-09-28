@@ -2,7 +2,6 @@ import { Post } from "../../page";
 import Markdown from "markdown-to-jsx";
 
 import { format } from "date-fns";
-import { RiBallPenLine } from "react-icons/ri";
 import { RiArrowLeftLine } from "react-icons/ri";
 import Link from "next/link";
 import axios from "axios";
@@ -42,16 +41,17 @@ async function PostDetail({ params }) {
         </Link>
       </section>
       {postData && (
-        <section className=" pt-4 border-b-[1px] border-LightAccent mb-8 ">
+        <section className=" ">
           <section>
-            <h1 className=" text-[2rem] blog__title heading dark:text-BgWhite lg:text-[3.5rem] py-8 ">
+            <h1 className=" text-2xl dark:text-BgWhite lg:text-3xl py-8 ">
               {postData.title}
             </h1>
           </section>
-          <div className=" flex lg:justify-between flex-col gap-4 lg:flex-row ">
+          <div className=" flex">
             <span className="flex justify-center w-fit items-center  text-secondary dark:text-BgWhite_200">
-              <RiBallPenLine />: {postData.author}
+              {/* <RiBallPenLine />: {postData.author} */}9 min read
             </span>
+            &bull;
             <span className="  text-secondary dark:text-BgWhite_200">
               {" "}
               {format(new Date(postData.updatedAt), "MMMM dd, yyy")}

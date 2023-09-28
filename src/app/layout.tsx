@@ -42,7 +42,7 @@ export default function RootLayout({
     >
       <body className={` text-BgDark dark:text-LightAccent `}>
         <div id="root" className="bg-BgWhite dark:bg-BgDark">
-          <div className=" bg-BgWhite dark:bg-BgDark  mx-auto w-full lg:w-3/5">
+          <div className=" bg-BgWhite dark:bg-BgDark  mx-auto w-full max-w-[700px]">
             <Navbar />
             {children}
             <Footer />
