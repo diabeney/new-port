@@ -74,8 +74,8 @@ export default function Projects() {
         </span>
 
         <p className="py-2 text-BgDark ">
-          Create Smooth App is a CLI Tool for scaffolding new NodeJs Projects
-          with Typescipt and React apps with ViteJs.
+          Create Smooth App is a CLI Tool for scaffolding new ExpressJs
+          applications with MongoDB and NPM Libraries Projects with TypeScript.
         </p>
       </section>
       <section>
