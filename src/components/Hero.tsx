@@ -25,7 +25,7 @@ export default function Hero() {
           if you're ready to collaborate on your next project!
         </p>
         <br />
-        <p>
+        {/* <p>
           Currently, I'm building{" "}
           <a
             href=""
@@ -37,7 +37,7 @@ export default function Hero() {
           designed to help chemical engineering students and laboratories
           efficiently manage their chemical inventory, ensure safety, and
           streamline research processes.
-        </p>
+        </p> */}
       </section>
       <section className="flex gap-4 py-6 justify-center items-center">
         <a
@@ -52,12 +52,12 @@ export default function Hero() {
             className=" text-LightAccent hover:text-blue-400"
           />
         </a>
-        <a href="https://www.linkedin.com/in/diabeney/">
+        {/* <a href="">
           <RiLinkedinBoxLine
             size={24}
             className=" text-LightAccent hover:text-blue-600"
           />
-        </a>
+        </a> */}
         <div className="w-full h-[0.1px] bg-LightAccent"></div>
       </section>
     </div>

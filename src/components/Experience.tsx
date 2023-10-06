@@ -22,8 +22,7 @@ export default function Experience() {
         </small>
         <p className="py-2 text-BgDark">
           At Slightly Techie, I collaborated with other skilled developers for
-          the front-end development of several projects, including a CRM
-          project, a{" "}
+          the front-end development of several projects, including a CRM app, a{" "}
           <a
             href="https://laundrydirttobright.vercel.app/"
             target=" _blank"
@@ -32,7 +31,7 @@ export default function Experience() {
             {" "}
             laundry web application{" "}
           </a>
-          , and an OKR (Objectives and Key Results) project. I worked closely
+          , and an OKR (Objectives and Key Results) software. I worked closely
           with the design team to create user-friendly and visually appealing
           interfaces that met the needs of the clients.
         </p>
