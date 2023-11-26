@@ -2,14 +2,14 @@ import { Post } from "../../page";
 import Markdown from "markdown-to-jsx";
 
 import { format } from "date-fns";
-import { RiArrowLeftLine } from "react-icons/ri";
+import { RiArrowLeftLine, RiCheckDoubleLine } from "react-icons/ri";
 import Link from "next/link";
 import axios from "axios";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export async function generateStaticParams() {
   const posts: { results: Post[] } = await axios
-    .get(`https://personal-blog-api.up.railway.app/posts`)
+    .get(`https://personal-blog-api-hdc7.onrender.com/posts`)
     .then((res) => res.data);
 
   return posts.results.map((post) => ({
@@ -23,16 +23,16 @@ async function PostDetail({ params }) {
     data: string;
     postData: Post;
   } = await axios
-    .get(`https://personal-blog-api.up.railway.app/posts/${slug}`)
+    .get(`https://personal-blog-api-hdc7.onrender.com/posts/${slug}`)
     .then((res) => res.data);
   const { data, postData } = foundPost;
 
   return (
-    <main className=" p-4">
+    <main className=" p-4 my-8">
       <section>
         <Link
           href={"/"}
-          className=" underline dark:text-LightAccent flex items-center "
+          className=" dark:text-LightAccent flex gap-2 items-center "
         >
           <span>
             <RiArrowLeftLine />
@@ -42,19 +42,21 @@ async function PostDetail({ params }) {
       </section>
       {postData && (
         <section className=" ">
-          <section>
-            <h1 className=" text-2xl dark:text-BgWhite lg:text-3xl py-8 ">
-              {postData.title}
-            </h1>
-          </section>
-          <div className=" flex">
-            <span className="flex justify-center w-fit items-center  text-secondary dark:text-BgWhite_200">
-              {/* <RiBallPenLine />: {postData.author} */}9 min read
-            </span>
-            &bull;
+          <section className=" pt-8">
             <span className="  text-secondary dark:text-BgWhite_200">
-              {" "}
-              {format(new Date(postData.updatedAt), "MMMM dd, yyy")}
+              {format(new Date(postData.updatedAt), "EEEE, MMMM dd, yyy")}
+            </span>
+            <p className=" blog__title text-2xl py-6 dark:text-BgWhite lg:text-[48px] font-bold  ">
+              {postData.title}
+            </p>
+          </section>
+          <div className="">
+            <span className="flex gap-2 justify-center w-fit items-center  text-secondary dark:text-BgWhite_200">
+              <p>
+                <RiCheckDoubleLine color="green" />
+              </p>
+
+              <p>{postData.author}</p>
             </span>
           </div>
         </section>

@@ -21,8 +21,8 @@ h6 {
 }
 
 .blog__title {
-  font-family: var(--font-paragraph);
-  line-height: 1.5;
+  font-family: var(--font-blog);
+  line-height: 1.2;
 }
 
 .attention {

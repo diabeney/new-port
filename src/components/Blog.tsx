@@ -12,7 +12,9 @@ export type TPost = {
 };
 
 async function Blog() {
-  const res = await axios.get("https://personal-blog-api.up.railway.app/posts");
+  const res = await axios.get(
+    "https://personal-blog-api-hdc7.onrender.com/posts"
+  );
   const data: { results: Post[] } = await res.data;
   return (
     <div className="p-4">
